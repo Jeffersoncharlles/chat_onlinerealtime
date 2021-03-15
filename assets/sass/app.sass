@@ -1,0 +1,147 @@
+@import 'reset'
+@import 'variables'
+
+body
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+    background-color: $bg-color
+    color: $text-color
+
+.container
+    background: $sala-color3
+    color: $sala-color2
+    width: 450px
+    border-radius: 1rem
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0,0.1 ), 0 32px 64px -48px rgba(0, 0, 0, 0.5)//sobra no container
+
+    &-chat
+        padding: 1.5rem 2rem
+
+        h1
+            color: $sala-color2
+            font-size: 2rem
+            font-weight: 600
+            padding-bottom: 1.5rem
+            border-bottom: 1px solid #DDDD
+
+        form
+            margin: 1.7rem 0
+        
+        .link
+            text-align: center
+            margin: 10px 0
+            font-size: 1rem
+            color: $text-color2
+
+            a
+                color: $text-color2
+
+                &:hover
+                    color: $sala-color2
+                    text-decoration: underline
+
+        &-error
+            color: $error
+            background: $bg-error
+            padding: 0.6rem 1rem
+            border-radius: 0.3rem
+            padding: 8px 10px
+            text-align: center
+            margin-bottom: 10px
+            border: 1px solid #f5c6cb
+
+        &-details
+            
+            .field
+                display: flex
+                flex-direction: column
+                margin-bottom: 1rem
+                
+
+                label
+                    margin-bottom: 2px
+
+                input
+                    outline: none
+
+                i
+                    position: relative
+                    left: 367px
+                    color: #ccc
+                    cursor: pointer
+                    
+
+            .input
+                input
+                    height: 2rem
+                    width: 100%
+                    font-size: 1rem
+                    padding: 0 1rem
+                    border: 1px solid #CCC
+                    border-radius: 5px
+            .image
+                input
+                    font-size: 17px
+
+            .btn-my
+                input
+                    margin-top: 13px
+                    height: 45px
+                    border: none
+                    font-size: 17px
+                    font-weight: 500
+                    background: $bg-color
+                    color: $text-color
+                    border-radius: 5px
+                    cursor: pointer
+
+                    &:hover
+                        transition: .4s
+                        background: $text-color2
+
+.container 
+    img
+        object-fit: cover
+        border-radius: 50%
+
+    &-users
+        padding: 1.8rem 2rem
+
+        &-chat
+            display: flex
+            align-items: center
+            padding-bottom: 1.4rem
+            justify-content: space-between
+            border: 1px solid $border-users
+
+            & .logout
+                color: #fff
+                font-size: 17px
+                border-radius: 5px
+                padding: 7px 15px
+                margin: 5px
+                background: #333
+
+            & .user-content
+                display: flex
+                img
+                    height: 50px
+                    width: 50px
+
+                &-details
+                    margin-left: 15px
+
+                    span
+                        font-size: 18px
+                        font-weight: bold
+
+        &-search
+            margin: 20px 0
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            & .text
+                font-size: 18px
