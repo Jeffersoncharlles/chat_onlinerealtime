@@ -117,7 +117,7 @@ body {
   align-items: center;
   padding-bottom: 1.4rem;
   justify-content: space-between;
-  border: 1px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
 }
 .container-users-chat .logout {
   color: #fff;
@@ -125,7 +125,7 @@ body {
   border-radius: 5px;
   padding: 7px 15px;
   margin: 5px;
-  background: #333;
+  background: #212121;
 }
 .container-users-chat .user-content {
   display: flex;
@@ -144,11 +144,57 @@ body {
 .container-users-search {
   margin: 20px 0;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
 }
-.container-users-search .text {
+.container-users-search input {
+  position: absolute;
+  height: 42px;
+  width: calc( 100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+.container-users-search span {
   font-size: 18px;
+}
+.container-users-search button {
+  width: 47px;
+  height: 42px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #212121;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 0 5px 5px 0;
+}
+
+.users-list a {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.4rem;
+  justify-content: space-between;
+  border-bottom: 2px solid #e6e6e6;
+}
+.users-list-content {
+  display: flex;
+  align-items: center;
+}
+.users-list-content img {
+  width: 40px;
+  height: 40px;
+}
+.users-list-content-details {
+  margin-left: 15px;
+}
+.users-list-content-details span {
+  color: #0d7377;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=app.css.map */
