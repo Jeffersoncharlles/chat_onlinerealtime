@@ -68,9 +68,14 @@ body
 
                 i
                     position: relative
-                    left: 367px
+                    left: 365px
                     color: #ccc
                     cursor: pointer
+                    transform: translateY(-140%)
+
+                    &.active::before
+                        content: "\f070" //unicode of an icon
+                        color: #333
                     
 
             .input

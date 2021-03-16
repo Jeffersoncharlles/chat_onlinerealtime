@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -74,9 +75,14 @@ body {
 }
 .container-chat-details .field i {
   position: relative;
-  left: 367px;
+  left: 365px;
   color: #ccc;
   cursor: pointer;
+  transform: translateY(-140%);
+}
+.container-chat-details .field i.active::before {
+  content: "";
+  color: #333;
 }
 .container-chat-details .input input {
   height: 2rem;
