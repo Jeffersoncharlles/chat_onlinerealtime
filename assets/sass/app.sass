@@ -233,3 +233,78 @@ body
         &-back-icon
             font-size: 18px
             color: $sala-color2
+
+        &-details
+
+            span
+                font-size: 17px
+                font-weight: bold
+.chat-box
+    height: 500px
+    overflow-y: auto //colocar barra de rolagem
+    background: $bg-chat-box
+    padding: 10px 30px 20px 30px
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),inset 0 -32px 32px -32px rgb(0 0 0 / 5%)//sombra na divisao
+    
+    &::-webkit-scrollbar
+        width: 0px
+
+    & .chat
+        margin: 15px 0
+
+    p
+        word-wrap: break-word
+        padding: 8px 16px
+        box-shadow: 0 0 32px rgb(0 0 0 / 8%), 0 16px 16px -16px rgb(0 0 0 / 10%)
+
+    & .outgoing
+        display: flex
+
+        & .chat-box-details
+            margin-left: auto
+            max-width: calc( 100% - 130px)
+
+            p
+                background: #333
+                color: $text-color
+                border-radius: 18px 18px 0 18px //moudar o fundo
+
+    & .incoming
+        display: flex
+        align-items: flex-end
+        img
+            height: 35px
+            width: 35px
+
+        & .chat-box-details
+            margin-left: 10px
+            margin-right: auto
+            max-width: calc( 100% -  130px)
+            p
+                color: #333
+                background: #FFF
+                border-radius: 18px 18px 18px 0 //moudar o fundo
+
+.typing-area
+    padding: 18px 30px
+    display: flex
+    justify-content: space-between
+
+    input
+        height: 45px
+        width: calc( 100% -  58px)
+        font-size: 17px
+        border: 1px solid #ccc
+        padding: 0 13px
+        border-radius: 5px
+        outline: none
+
+    button
+        width: 55px
+        border: none
+        outline: none
+        background: #333
+        color: $text-color
+        font-size: 19px
+        border-radius: 0 5px 5px 0
+        cursor: pointer
