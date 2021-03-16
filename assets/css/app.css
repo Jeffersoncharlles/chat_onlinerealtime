@@ -184,7 +184,7 @@ body {
   font-size: 12px;
   color: #21bf73;
 }
-.users-list-status-dot.offline {
+.users-list-status-dot.offiline {
   font-size: 12px;
   color: #413c69;
 }
@@ -222,6 +222,21 @@ body {
 }
 .users-list-content-details p {
   color: #67676a;
+}
+
+.container-chats-chat {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+.container-chats-chat img {
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
+.container-chats-chat-back-icon {
+  font-size: 18px;
+  color: #0d7377;
 }
 
 /*# sourceMappingURL=app.css.map */
