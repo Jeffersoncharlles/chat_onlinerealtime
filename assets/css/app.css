@@ -177,9 +177,16 @@ body {
   max-height: 350px;
   overflow-y: auto;
 }
+.users-list::-webkit-scrollbar {
+  width: 0px;
+}
 .users-list-status-dot {
   font-size: 12px;
-  color: #468669;
+  color: #21bf73;
+}
+.users-list-status-dot.offline {
+  font-size: 12px;
+  color: #413c69;
 }
 .users-list a {
   display: flex;
@@ -212,6 +219,9 @@ body {
   color: #0d7377;
   font-size: 18px;
   font-weight: 500;
+}
+.users-list-content-details p {
+  color: #67676a;
 }
 
 /*# sourceMappingURL=app.css.map */
