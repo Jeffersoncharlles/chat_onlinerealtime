@@ -149,6 +149,7 @@ body
             align-items: center
             justify-content: space-between
             
+            
 
             input
                 position: absolute
@@ -160,6 +161,13 @@ body
                 border-radius: 5px
                 outline: none
 
+                opacity: 0
+                pointer-events: none
+                transition: all 0.3s ease
+
+                &.active
+                    opacity: 1
+                    pointer-events: auto
             span
                 font-size: 18px
 
@@ -168,11 +176,19 @@ body
                 height: 42px
                 border:  none
                 outline: none
-                color: #fff
-                background: $bg-color
+                color: $bg-color
+                background: $sala-color3
                 cursor: pointer
                 font-size: 17px
                 border-radius: 0 5px 5px 0
+                transition: all 0.2s ease
+
+                &.active
+                    color: $text-color
+                    background: $bg-color
+
+                    i::before
+                        content: "\f00d" //mudar a pesquisa para x
 
 // User list
 
