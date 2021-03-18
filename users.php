@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTimeChat</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- CSS DO PROJETO -->
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+    <div class="container">
+        <section class="container-users">
+           <header class="container-users-chat">
+               <div class="user-content">
+                    <img src="./assets/img/unnamed.png" alt="">
+                    <div class="user-content-details">
+                        <span>usuario 1</span>
+                        <p>Active now</p>
+                    </div>
+               </div>
+               <a href="#" class="logout">Logout</a>
+           </header>
+           <div class="container-users-search">
+               <span class="text">Select an user to start chat</span>
+               <input type="text" placeholder="Digite o nome para procurar">
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="users-list">
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot"><i class="fas fa-circle"></i></div>
+                </a>
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot"><i class="fas fa-circle"></i></div>
+                </a>
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot"><i class="fas fa-circle"></i></div>
+                </a>
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot"><i class="fas fa-circle"></i></div>
+                </a>
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot"><i class="fas fa-circle"></i></div>
+                </a>
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot offline"><i class="fas fa-circle"></i></div>
+                </a>
+                <a  class="users-list-link" href="">
+                    <div class="users-list-content">
+                        <img src="./assets/img/unnamed.png" alt="" >
+                        <div class="users-list-content-details">
+                            <span>Coding Nepal</span>
+                            <p>this is text Message</p>
+                        </div>
+                    </div>
+                    <div class="users-list-status-dot"><i class="fas fa-circle"></i></div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="./assets/js/search.js"></script>
+</body>
+</html>
