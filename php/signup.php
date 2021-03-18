@@ -23,23 +23,32 @@ if($fullName && $lastName && $email && $password){
     $sql->execute();
 
     if ($sql->rowCount() === 0) {
-        
+        $status = "Active Now";
+        $random_id = rand(time(), 100000000);
 
-        $sql = $pdo->prepare("INSERT INTO users (fullname, lastName, email, password,avatar) VALUES (:fullName,:lastName,:email,:password,:imagem)");
+        $sql = $pdo->prepare("INSERT INTO users (unique_id, fullname, lastname, email, password) VALUES (:unique_id,:fullName,:lastName,:email,:password)");
+        $sql->bindValue(':unique_id', $random_id);
         $sql->bindValue(':fullName', $fullName);
         $sql->bindValue(':lastName', $lastName);
         $sql->bindValue(':email', $email);
         $sql->bindValue(':password', md5($password));
-        
-        // if ($image) {
-        //     $imagem = $imgName;
-        //     $sql->bindValue(':imagem', $imagem);
-        // }
-
         $sql->execute();
 
-        // header("Location: /");
-        // exit;
+        if($sql){
+            $mysql = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+            $mysql->bindValue(':email', $email);
+            $mysql->execute();
+
+            //var_dump($mysql);
+            if ($mysql->rowCount() > 0) {
+                $info = $mysql->fetch();
+                $_SESSION['unique_id'] = $info['unique_id'];
+                echo "sucesso";
+            }
+        }
+
+    }else{
+        echo "$email Existe!";
     }
 }else{
     echo "All input field are required!";

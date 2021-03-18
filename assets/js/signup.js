@@ -1,5 +1,6 @@
 const form = document.querySelector(".signup form");
 const continueBtn = form.querySelector(".btn-my input");
+const errorTexto = form.querySelector(".container-chat-error");
 
 form.onsubmit = (e)=>{
     e.preventDefault();
@@ -13,7 +14,13 @@ continueBtn.onclick = () =>{
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response;
-                console.log(data);
+                if (data == "sucesso"){
+                    location.href = "users.php";
+                }else{
+                    errorTexto.textContent = data;
+                    errorTexto.style.display = "block";
+                    
+                }
             }
         }
     }
