@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </form>
-            <div class="link">Ja tem conta ? <a href="#">Login now</a></div>
+            <div class="link">Ja tem conta ? <a href="login.php">Login now</a></div>
         </section>
     </div>
 
