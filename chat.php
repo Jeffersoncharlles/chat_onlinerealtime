@@ -1,6 +1,19 @@
 <?php 
+require "./assets/config/config.php";
 
+if (!isset($_SESSION['unique_id'])) {
+    header("Location: ./login.php");
+}
+$user_id = filter_input(INPUT_GET,'user_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
+$sql = $pdo->prepare("SELECT * FROM users WHERE unique_id = :user_id");
+$sql->bindValue(":user_id",$user_id);
+$sql->execute();
+
+if ($sql->rowCount() > 0) {
+    $info = $sql->fetch(PDO::FETCH_ASSOC);
+
+}
 
 
 ?>
@@ -9,11 +22,11 @@
     <div class="container">
         <section class="container-chats">
            <header class="container-chats-chat">
-               <a href="#" class="container-chats-chat-back-icon"><i class="fas fa-arrow-left"></i></a>
-                <img src="./assets/img/unnamed.png" alt="">
+               <a href="users.php" class="container-chats-chat-back-icon"><i class="fas fa-arrow-left"></i></a>
+                <img src="./assets/img/<?=$info['avatar']?>" alt="">
                 <div class="container-chats-chat-details">
-                    <span>usuario 1</span>
-                    <p>Active now</p>
+                    <span><?=$info['fullname']." ".$info['lastname'];?></span>
+                    <p><?=$info['status'];?></p>
                 </div>
            </header>
            <div class="chat-box">

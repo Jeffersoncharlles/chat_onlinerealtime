@@ -40,6 +40,7 @@ setInterval(()=>{
                 let data = xhr.response;
                 if (!searchBar.classList.contains("active")) {
                     userList.innerHTML = data;
+                    // se tem nao tem active ele atualiza se tem nao atualiza
                 }
              }
          }
