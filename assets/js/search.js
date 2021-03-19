@@ -1,8 +1,24 @@
 const searchBar = document.querySelector(".container-users-search input");
 const searchBtn = document.querySelector(".container-users-search button");
+const userList = document.querySelector(".users-list");
 
 searchBtn.onclick = () =>{
     searchBar.classList.toggle("active");
     searchBar.focus();
     searchBtn.classList.toggle("active");
 }
+
+setInterval(()=>{
+     //let start ajax
+     let xhr = new XMLHttpRequest();
+     xhr.open("get","php/users.php", true);
+     xhr.onload = () =>{
+         if(xhr.readyState === XMLHttpRequest.DONE){
+             if(xhr.status === 200){
+                let data = xhr.response;
+                userList.innerHTML = data;
+             }
+         }
+     }
+     xhr.send();
+}, 500);

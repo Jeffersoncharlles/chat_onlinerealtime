@@ -13,3 +13,4 @@ try{
 	exit;
  }
  
+$config['rewrite_short_tags'] = FALSE;

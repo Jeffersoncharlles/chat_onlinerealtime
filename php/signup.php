@@ -41,7 +41,7 @@ if($fullName && $lastName && $email && $password){
 
             //var_dump($mysql);
             if ($mysql->rowCount() > 0) {
-                $info = $mysql->fetch();
+                $info = $mysql->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['unique_id'] = $info['unique_id'];
                 echo "sucesso";
             }

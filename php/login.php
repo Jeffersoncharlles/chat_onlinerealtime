@@ -12,7 +12,7 @@ if( $email && $password){
     $sql->execute();
 
     if ($sql->rowCount() > 0) {
-       $info = $sql->fetch();
+       $info = $sql->fetch(PDO::FETCH_ASSOC);
         $_SESSION['unique_id'] = $info['unique_id'];
         echo "sucesso";
     }else{
