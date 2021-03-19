@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RealTimeChat</title>
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <!-- CSS DO PROJETO -->
-    <link rel="stylesheet" href="assets/css/app.css">
-</head>
+<?php 
+include_once "./assets/config/config.php";
+
+if (!isset($_SESSION['unique_id'])) {
+    header("Location: ./login.php");
+}
+
+$unique_id = $_SESSION['unique_id'];
+
+$sql = $pdo->prepare("SELECT * FROM users WHERE unique_id = :unique_id");
+$sql->bindValue(":unique_id",$unique_id);
+$sql->execute();
+
+if ($sql->rowCount() > 0) {
+    $info = $sql->fetch(PDO::FETCH_ASSOC);
+
+}
+
+?>
+
+<?php include_once "header.php"; ?>
 <body>
     <div class="container">
         <section class="container-users">
@@ -17,8 +26,8 @@
                <div class="user-content">
                     <img src="./assets/img/unnamed.png" alt="">
                     <div class="user-content-details">
-                        <span>usuario 1</span>
-                        <p>Active now</p>
+                        <span><?=$info['fullname'];?></span>
+                        <p><?=$info['status'];?></p>
                     </div>
                </div>
                <a href="#" class="logout">Logout</a>
