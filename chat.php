@@ -4,6 +4,8 @@ require "./assets/config/config.php";
 if (!isset($_SESSION['unique_id'])) {
     header("Location: ./login.php");
 }
+$unique_id = $_SESSION['unique_id'];
+
 $user_id = filter_input(INPUT_GET,'user_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $sql = $pdo->prepare("SELECT * FROM users WHERE unique_id = :user_id");
@@ -87,10 +89,13 @@ if ($sql->rowCount() > 0) {
                </div>
            </div>
            <form action="#" class="typing-area">
-               <input type="text" placeholder="Digite sua messagem aqui..">
+               <input type="text" name="outgoing_id" value="<?=$unique_id;?>">
+               <input type="text" name="incoming_id" value="<?=$user_id;?>">
+               <input type="text" name="message" class="input-field" placeholder="Digite sua messagem aqui..">
                <button><i class="fab fa-telegram-plane"></i></button>
            </form>
         </section>
     </div>
+    <script src="./assets/js/chat.js"></script>
 </body>
 </html>
