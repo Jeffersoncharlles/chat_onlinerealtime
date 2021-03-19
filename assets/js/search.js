@@ -11,19 +11,22 @@ searchBtn.onclick = () =>{
 searchBar.onkeyup = ()=>{
     let searchterm = searchBar.value;
     if (searchterm != "") {
-        let xhr = new XMLHttpRequest();
+        searchBar.classList.add("active");
+    }else{
+        searchBar.classList.remove("active");
+    }
+    let xhr = new XMLHttpRequest();
         xhr.open("POST","php/search.php", true);
         xhr.onload = () =>{
             if(xhr.readyState === XMLHttpRequest.DONE){
                 if(xhr.status === 200){
                    let data = xhr.response;
-                   console.log(data);
+                   userList.innerHTML = data;
                 }
             }
         }
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send("searchterm=" + searchterm); 
-    }
 }
 
 setInterval(()=>{
@@ -34,7 +37,9 @@ setInterval(()=>{
          if(xhr.readyState === XMLHttpRequest.DONE){
              if(xhr.status === 200){
                 let data = xhr.response;
-                userList.innerHTML = data;
+                if (!searchBar.classList.contains("active")) {
+                    userList.innerHTML = data;
+                }
              }
          }
      }
