@@ -30,7 +30,7 @@ if ($sql->rowCount() > 0) {
                         <p><?=$info['status'];?></p>
                     </div>
                </div>
-               <a href="#" class="logout">Logout</a>
+               <a href="logout.php" class="logout">Logout</a>
            </header>
            <div class="container-users-search">
                <span class="text">Select an user to start chat</span>

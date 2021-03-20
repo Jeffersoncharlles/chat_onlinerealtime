@@ -3,7 +3,8 @@ include_once "../assets/config/config.php";
 
 $outgoing_id = $_SESSION['unique_id'];
 
-$sql = $pdo->prepare("SELECT * FROM users");
+$sql = $pdo->prepare("SELECT * FROM users WHERE NOT unique_id = :outgoing_id");
+$sql->bindValue(":outgoing_id",$outgoing_id);
 $sql->execute();
 
 $output = "";
