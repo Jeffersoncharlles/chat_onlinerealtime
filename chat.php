@@ -32,61 +32,6 @@ if ($sql->rowCount() > 0) {
                 </div>
            </header>
            <div class="chat-box">
-               <div class="chat outgoing">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                   </div>
-               </div>
-               <div class="chat incoming">
-                   <img src="./assets/img/unnamed.png" alt="">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi vitae soluta sunt error quis, veritatis voluptates nobis facere doloremque! Ullam alias corrupti facilis aut! Eligendi placeat quis labore numquam iusto?</p>
-                   </div>
-               </div>
-               <div class="chat outgoing">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                   </div>
-               </div>
-               <div class="chat incoming">
-                   <img src="./assets/img/unnamed.png" alt="">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi vitae soluta sunt error quis, veritatis voluptates nobis facere doloremque! Ullam alias corrupti facilis aut! Eligendi placeat quis labore numquam iusto?</p>
-                   </div>
-               </div>
-               <div class="chat outgoing">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                   </div>
-               </div>
-               <div class="chat incoming">
-                   <img src="./assets/img/unnamed.png" alt="">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi vitae soluta sunt error quis, veritatis voluptates nobis facere doloremque! Ullam alias corrupti facilis aut! Eligendi placeat quis labore numquam iusto?</p>
-                   </div>
-               </div>
-               <div class="chat outgoing">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                   </div>
-               </div>
-               <div class="chat incoming">
-                   <img src="./assets/img/unnamed.png" alt="">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi vitae soluta sunt error quis, veritatis voluptates nobis facere doloremque! Ullam alias corrupti facilis aut! Eligendi placeat quis labore numquam iusto?</p>
-                   </div>
-               </div>
-               <div class="chat outgoing">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                   </div>
-               </div>
-               <div class="chat incoming">
-                   <img src="./assets/img/unnamed.png" alt="">
-                   <div class="chat-box-details">
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi vitae soluta sunt error quis, veritatis voluptates nobis facere doloremque! Ullam alias corrupti facilis aut! Eligendi placeat quis labore numquam iusto?</p>
-                   </div>
-               </div>
            </div>
            <form action="#" class="typing-area" autocomplete="off">
                <input type="text" name="outgoing_id" value="<?=$unique_id;?>" hidden >
