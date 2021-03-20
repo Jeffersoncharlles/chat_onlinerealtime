@@ -1,6 +1,8 @@
 <?php 
 include_once "../assets/config/config.php";
 
+$outgoing_id = $_SESSION['unique_id'];
+
 $sql = $pdo->prepare("SELECT * FROM users");
 $sql->execute();
 
