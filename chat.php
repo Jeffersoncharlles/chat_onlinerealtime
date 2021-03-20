@@ -88,9 +88,9 @@ if ($sql->rowCount() > 0) {
                    </div>
                </div>
            </div>
-           <form action="#" class="typing-area">
-               <input type="text" name="outgoing_id" value="<?=$unique_id;?>">
-               <input type="text" name="incoming_id" value="<?=$user_id;?>">
+           <form action="#" class="typing-area" autocomplete="off">
+               <input type="text" name="outgoing_id" value="<?=$unique_id;?>" hidden >
+               <input type="text" name="incoming_id" value="<?=$user_id;?>" hidden >
                <input type="text" name="message" class="input-field" placeholder="Digite sua messagem aqui..">
                <button><i class="fab fa-telegram-plane"></i></button>
            </form>
