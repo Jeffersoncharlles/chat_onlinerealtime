@@ -13,8 +13,15 @@ if( $email && $password){
 
     if ($sql->rowCount() > 0) {
        $info = $sql->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['unique_id'] = $info['unique_id'];
-        echo "sucesso";
+        $status = "Active Now";
+        $sql2 = $pdo->prepare("UPDATE users SET status = :status WHERE unique_id = :logout_id ");
+        $sql2->bindValue(":status",$status);
+        $sql2->bindValue(":logout_id",$info['unique_id']);
+        $sql2->execute();
+        if ($sql2) {
+            $_SESSION['unique_id'] = $info['unique_id'];
+            echo "sucesso";
+        }
     }else{
         echo "Email or Passowrd is incorrect!";
     }
